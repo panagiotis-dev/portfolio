@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Portfolio{% endblock %}
+
+{% block body %}
+
+<h2>COMPETENCES</h2>
+<h2>Technologie</h2>
+<div class="row">
+    {% for technologie in technologies %}
+
+        <p>{{ technologie.nom }}</p>
+
+    {% endfor %}
+</div>
+
+
+<h2>TEXTE</h2>
+    <div class="row">
+        <p>{{ apropos.texte }}</p>
+    </div>
+{% endblock %}
