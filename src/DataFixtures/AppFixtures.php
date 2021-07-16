@@ -41,6 +41,46 @@ class AppFixtures extends Fixture
         $competence5->setCategorie('technologie');
         $manager->persist($competence5);
 
+        $competence6 = new Competences();
+        $competence6->setNom('symfony');
+        $competence6->setCategorie('frameworks');
+        $manager->persist($competence6);
+
+        $competence7 = new Competences();
+        $competence7->setNom('bootstrap');
+        $competence7->setCategorie('frameworks');
+        $manager->persist($competence7);
+
+        $competence8 = new Competences();
+        $competence8->setNom('fontAwesome');
+        $competence8->setCategorie('frameworks');
+        $manager->persist($competence8);
+
+        $competence9 = new Competences();
+        $competence9->setNom('twig');
+        $competence9->setCategorie('frameworks');
+        $manager->persist($competence9);
+
+        $competence10 = new Competences();
+        $competence10->setNom('PrestaShop');
+        $competence10->setCategorie('cms');
+        $manager->persist($competence10);
+
+        $competence11 = new Competences();
+        $competence11->setNom('concrete5');
+        $competence11->setCategorie('cms');
+        $manager->persist($competence11);
+
+        $competence12 = new Competences();
+        $competence12->setNom('wordpress');
+        $competence12->setCategorie('cms');
+        $manager->persist($competence12);
+
+        $competence13 = new Competences();
+        $competence13->setNom('dolibarr');
+        $competence13->setCategorie('cms');
+        $manager->persist($competence13);
+
 
 
         $manager->flush();

@@ -4,19 +4,47 @@
 
 {% block body %}
 
-<h2>COMPETENCES</h2>
-<h2>Technologie</h2>
-<div class="row">
-    {% for technologie in technologies %}
+<div class="row my-5">
+    <h2 class="text-center mb-5">COMPETENCES</h2>
+        <div class="col-3 offset-1">
+            <h2>Technologie</h2>
+            {% for technologie in technologies %}
 
-        <p>{{ technologie.nom }}</p>
+                <p>{{ technologie.nom }}</p>
 
-    {% endfor %}
+            {% endfor %}
+        </div>
+        <div class="col-3 offset-1">
+
+    <h2>cms</h2>
+
+        {% for cms in cmss %}
+
+            <p>{{ cms.nom }}</p>
+
+        {% endfor %}
+    </div>
+
+    <div class="col-3 offset-1">
+
+    <h2>framework</h2>
+
+        {% for framework in frameworks %}
+
+            <p>{{ framework.nom }}</p>
+
+        {% endfor %}
+    </div>
+
+
 </div>
 
+<div class="row">
+    <div class="col-12 text-center">
+        <h2>A propos</h2>
+    </div>
 
-<h2>TEXTE</h2>
-    <div class="row">
+    <div class="row text-center">
         <p>{{ apropos.texte }}</p>
     </div>
-{% endblock %}
+    {% endblock %}

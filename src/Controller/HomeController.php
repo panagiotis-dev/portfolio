@@ -16,11 +16,16 @@ class HomeController extends AbstractController
     public function index(CompetencesRepository $competencesRepository, AproposRepository  $aproposRepository): Response
     {
         $technologies = $competencesRepository->findBy(array('categorie' => 'technologie'));
-        $apropos = $aproposRepository->find(1);
+        $cmss = $competencesRepository->findBy(array('categorie' => 'cms'));
+        $frameworks = $competencesRepository->findBy(array('categorie' => 'frameworks'));
+
+        $apropos = $aproposRepository->find(2);
 
         return $this->render('home/index.html.twig', [
             'apropos' => $apropos,
-            'technologies' => $technologies
+            'technologies' => $technologies,
+            'cmss' => $cmss,
+            'frameworks' => $frameworks
         ]);
     }
 }
